@@ -14,10 +14,10 @@ LOCAL_JAVA_LIBRARIES := \
     android.test.mock
 
 LOCAL_STATIC_JAVA_LIBRARIES :=  \
-    com.android.emailcommon \
     androidx.test.rules \
     mockito-target \
     androidx.test.espresso.intents
+    # com.android.emailcommon \
 
 # Include all test java files.
 LOCAL_SRC_FILES := $(call all-java-files-under, src)

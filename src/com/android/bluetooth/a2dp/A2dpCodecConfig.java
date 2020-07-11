@@ -245,12 +245,12 @@ class A2dpCodecConfig {
             case 5:
                 mA2dpSourceCodecPriorityLdac = BluetoothCodecConfig.CODEC_PRIORITY_HIGHEST;
                 break;
-            case 6:
+            /*case 6:
                 mA2dpSourceCodecPriorityAptxAdaptive = BluetoothCodecConfig.CODEC_PRIORITY_HIGHEST;
                 break;
             case 7:
                 mA2dpSourceCodecPriorityAptxTwsp = BluetoothCodecConfig.CODEC_PRIORITY_HIGHEST;
-                break;
+                break;*/
         }
 
         BluetoothCodecConfig codecConfig;

@@ -93,7 +93,6 @@ class A2dpCodecConfig {
     }
 
     void enableOptionalCodecs(BluetoothDevice device, BluetoothCodecConfig currentCodecConfig) {
-        Resources resources = mContext.getResources();
         if (currentCodecConfig != null && !currentCodecConfig.isMandatoryCodec()) {
             Log.i(TAG, "enableOptionalCodecs: already using optional codec "
                     + currentCodecConfig.getCodecName());
@@ -110,7 +109,7 @@ class A2dpCodecConfig {
             BluetoothCodecConfig codecConfig = codecConfigArray[i];
             if (codecConfig != null && !codecConfig.isMandatoryCodec()) {
                 codecConfigArray[i] = null;
-            } else if (resources.getBoolean(com.android.internal.R.bool.config_enableSBCDualChannelAudio)) {
+            } else {
                 // Rebuild SBC selectable codec with Dual Channel (SBC HD audio)
                 codecConfigArray[i] = new BluetoothCodecConfig(
                   BluetoothCodecConfig.SOURCE_CODEC_TYPE_SBC, mA2dpSourceCodecPrioritySbc,

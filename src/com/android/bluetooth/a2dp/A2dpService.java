@@ -1038,8 +1038,7 @@ public class A2dpService extends ProfileService {
                     boolean isMandatoryCodecWithDualChannel = (config.isMandatoryCodec()
                             && (config.getChannelMode() & config.CHANNEL_MODE_DUAL_CHANNEL)
                                    == config.CHANNEL_MODE_DUAL_CHANNEL);
-                    boolean isSBCDualChannel = getResources().getBoolean(com.android.internal.R.bool.config_enableSBCDualChannelAudio);
-                    if (isMandatoryCodecWithDualChannel && isSBCDualChannel) {
+                    if (isMandatoryCodecWithDualChannel) {
                         hasMandatoryCodec = true;
                         supportsOptional = true;
                     } else if (config.isMandatoryCodec()) {

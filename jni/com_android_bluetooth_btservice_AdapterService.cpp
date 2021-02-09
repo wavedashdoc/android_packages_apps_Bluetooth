@@ -684,7 +684,7 @@ static void classInitNative(JNIEnv* env, jclass clazz) {
 }
 
 static bool initNative(JNIEnv* env, jobject obj, jboolean isGuest,
-
+                       jboolean isSingleUserMode, jboolean isAtvDevice) {
   ALOGV("%s", __func__);
 
   android_bluetooth_UidTraffic.clazz =
